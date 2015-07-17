@@ -4,7 +4,7 @@
         Dim lWSEDV As New WSEDV.Servicios
         lWSEDV.Registrar(TextBox1.Text)
         TextBox1.Text = 1
-        TextBox1.Text = 31
+        TextBox1.Text = 32
 
 
         'Prueba
