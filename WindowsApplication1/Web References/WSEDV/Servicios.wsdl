@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Registrar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pStrCodDesmaterializado" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RegistrarResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarRenovacionAutomatica">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pStrCodDesmaterializado" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarRenovacionAutomaticaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RegistrarRenovacionAutomaticaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarRedencionAnticipada">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pStrCodDesmaterializado" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarRedencionAnticipadaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RegistrarRedencionAnticipadaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarPagoCupon">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pStrCodDesmaterializado" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pIntNroCupon" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RegistrarPagoCuponResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RegistrarPagoCuponResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TestConectionEdvbPCU">
+        <s:complexType />
+      </s:element>
+      <s:element name="TestConectionEdvbPCUResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TestConectionEdvbPCUResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SolicitudBloqueo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pStrXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SolicitudBloqueoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SolicitudBloqueoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SolicitudDesbloqueo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pStrXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SolicitudDesbloqueoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SolicitudDesbloqueoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarCUI">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pStrCodDesmaterializado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pStrCUI" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizarCUIResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ActualizarCUIResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TransferenciaDPF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pStrXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TransferenciaDPFResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TransferenciaDPFResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DesmaterializacionSecDPF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pStrXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DesmaterializacionSecDPFResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DesmaterializacionSecDPFResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarDPF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pStrSerie" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pStrNroOperacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultarDPFResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConsultarDPFResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConciliacionDPF">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pStrOperacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pDTFeoperacion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pIntNroOperacion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConciliacionDPFResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ConciliacionDPFResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="RegistrarSoapIn">
+    <wsdl:part name="parameters" element="tns:Registrar" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistrarResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarRenovacionAutomaticaSoapIn">
+    <wsdl:part name="parameters" element="tns:RegistrarRenovacionAutomatica" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarRenovacionAutomaticaSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistrarRenovacionAutomaticaResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarRedencionAnticipadaSoapIn">
+    <wsdl:part name="parameters" element="tns:RegistrarRedencionAnticipada" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarRedencionAnticipadaSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistrarRedencionAnticipadaResponse" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarPagoCuponSoapIn">
+    <wsdl:part name="parameters" element="tns:RegistrarPagoCupon" />
+  </wsdl:message>
+  <wsdl:message name="RegistrarPagoCuponSoapOut">
+    <wsdl:part name="parameters" element="tns:RegistrarPagoCuponResponse" />
+  </wsdl:message>
+  <wsdl:message name="TestConectionEdvbPCUSoapIn">
+    <wsdl:part name="parameters" element="tns:TestConectionEdvbPCU" />
+  </wsdl:message>
+  <wsdl:message name="TestConectionEdvbPCUSoapOut">
+    <wsdl:part name="parameters" element="tns:TestConectionEdvbPCUResponse" />
+  </wsdl:message>
+  <wsdl:message name="SolicitudBloqueoSoapIn">
+    <wsdl:part name="parameters" element="tns:SolicitudBloqueo" />
+  </wsdl:message>
+  <wsdl:message name="SolicitudBloqueoSoapOut">
+    <wsdl:part name="parameters" element="tns:SolicitudBloqueoResponse" />
+  </wsdl:message>
+  <wsdl:message name="SolicitudDesbloqueoSoapIn">
+    <wsdl:part name="parameters" element="tns:SolicitudDesbloqueo" />
+  </wsdl:message>
+  <wsdl:message name="SolicitudDesbloqueoSoapOut">
+    <wsdl:part name="parameters" element="tns:SolicitudDesbloqueoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarCUISoapIn">
+    <wsdl:part name="parameters" element="tns:ActualizarCUI" />
+  </wsdl:message>
+  <wsdl:message name="ActualizarCUISoapOut">
+    <wsdl:part name="parameters" element="tns:ActualizarCUIResponse" />
+  </wsdl:message>
+  <wsdl:message name="TransferenciaDPFSoapIn">
+    <wsdl:part name="parameters" element="tns:TransferenciaDPF" />
+  </wsdl:message>
+  <wsdl:message name="TransferenciaDPFSoapOut">
+    <wsdl:part name="parameters" element="tns:TransferenciaDPFResponse" />
+  </wsdl:message>
+  <wsdl:message name="DesmaterializacionSecDPFSoapIn">
+    <wsdl:part name="parameters" element="tns:DesmaterializacionSecDPF" />
+  </wsdl:message>
+  <wsdl:message name="DesmaterializacionSecDPFSoapOut">
+    <wsdl:part name="parameters" element="tns:DesmaterializacionSecDPFResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarDPFSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultarDPF" />
+  </wsdl:message>
+  <wsdl:message name="ConsultarDPFSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultarDPFResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConciliacionDPFSoapIn">
+    <wsdl:part name="parameters" element="tns:ConciliacionDPF" />
+  </wsdl:message>
+  <wsdl:message name="ConciliacionDPFSoapOut">
+    <wsdl:part name="parameters" element="tns:ConciliacionDPFResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiciosSoap">
+    <wsdl:operation name="Registrar">
+      <wsdl:input message="tns:RegistrarSoapIn" />
+      <wsdl:output message="tns:RegistrarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarRenovacionAutomatica">
+      <wsdl:input message="tns:RegistrarRenovacionAutomaticaSoapIn" />
+      <wsdl:output message="tns:RegistrarRenovacionAutomaticaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarRedencionAnticipada">
+      <wsdl:input message="tns:RegistrarRedencionAnticipadaSoapIn" />
+      <wsdl:output message="tns:RegistrarRedencionAnticipadaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarPagoCupon">
+      <wsdl:input message="tns:RegistrarPagoCuponSoapIn" />
+      <wsdl:output message="tns:RegistrarPagoCuponSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestConectionEdvbPCU">
+      <wsdl:input message="tns:TestConectionEdvbPCUSoapIn" />
+      <wsdl:output message="tns:TestConectionEdvbPCUSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SolicitudBloqueo">
+      <wsdl:input message="tns:SolicitudBloqueoSoapIn" />
+      <wsdl:output message="tns:SolicitudBloqueoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SolicitudDesbloqueo">
+      <wsdl:input message="tns:SolicitudDesbloqueoSoapIn" />
+      <wsdl:output message="tns:SolicitudDesbloqueoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarCUI">
+      <wsdl:input message="tns:ActualizarCUISoapIn" />
+      <wsdl:output message="tns:ActualizarCUISoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TransferenciaDPF">
+      <wsdl:input message="tns:TransferenciaDPFSoapIn" />
+      <wsdl:output message="tns:TransferenciaDPFSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DesmaterializacionSecDPF">
+      <wsdl:input message="tns:DesmaterializacionSecDPFSoapIn" />
+      <wsdl:output message="tns:DesmaterializacionSecDPFSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarDPF">
+      <wsdl:input message="tns:ConsultarDPFSoapIn" />
+      <wsdl:output message="tns:ConsultarDPFSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConciliacionDPF">
+      <wsdl:input message="tns:ConciliacionDPFSoapIn" />
+      <wsdl:output message="tns:ConciliacionDPFSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiciosSoap" type="tns:ServiciosSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Registrar">
+      <soap:operation soapAction="http://tempuri.org/Registrar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarRenovacionAutomatica">
+      <soap:operation soapAction="http://tempuri.org/RegistrarRenovacionAutomatica" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarRedencionAnticipada">
+      <soap:operation soapAction="http://tempuri.org/RegistrarRedencionAnticipada" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarPagoCupon">
+      <soap:operation soapAction="http://tempuri.org/RegistrarPagoCupon" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestConectionEdvbPCU">
+      <soap:operation soapAction="http://tempuri.org/TestConectionEdvbPCU" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SolicitudBloqueo">
+      <soap:operation soapAction="http://tempuri.org/SolicitudBloqueo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SolicitudDesbloqueo">
+      <soap:operation soapAction="http://tempuri.org/SolicitudDesbloqueo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarCUI">
+      <soap:operation soapAction="http://tempuri.org/ActualizarCUI" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransferenciaDPF">
+      <soap:operation soapAction="http://tempuri.org/TransferenciaDPF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DesmaterializacionSecDPF">
+      <soap:operation soapAction="http://tempuri.org/DesmaterializacionSecDPF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarDPF">
+      <soap:operation soapAction="http://tempuri.org/ConsultarDPF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConciliacionDPF">
+      <soap:operation soapAction="http://tempuri.org/ConciliacionDPF" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiciosSoap12" type="tns:ServiciosSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Registrar">
+      <soap12:operation soapAction="http://tempuri.org/Registrar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarRenovacionAutomatica">
+      <soap12:operation soapAction="http://tempuri.org/RegistrarRenovacionAutomatica" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarRedencionAnticipada">
+      <soap12:operation soapAction="http://tempuri.org/RegistrarRedencionAnticipada" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RegistrarPagoCupon">
+      <soap12:operation soapAction="http://tempuri.org/RegistrarPagoCupon" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestConectionEdvbPCU">
+      <soap12:operation soapAction="http://tempuri.org/TestConectionEdvbPCU" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SolicitudBloqueo">
+      <soap12:operation soapAction="http://tempuri.org/SolicitudBloqueo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SolicitudDesbloqueo">
+      <soap12:operation soapAction="http://tempuri.org/SolicitudDesbloqueo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarCUI">
+      <soap12:operation soapAction="http://tempuri.org/ActualizarCUI" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TransferenciaDPF">
+      <soap12:operation soapAction="http://tempuri.org/TransferenciaDPF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DesmaterializacionSecDPF">
+      <soap12:operation soapAction="http://tempuri.org/DesmaterializacionSecDPF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultarDPF">
+      <soap12:operation soapAction="http://tempuri.org/ConsultarDPF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConciliacionDPF">
+      <soap12:operation soapAction="http://tempuri.org/ConciliacionDPF" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Servicios">
+    <wsdl:port name="ServiciosSoap" binding="tns:ServiciosSoap">
+      <soap:address location="http://bgweb00/WSBGEDV/Servicios.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiciosSoap12" binding="tns:ServiciosSoap12">
+      <soap12:address location="http://bgweb00/WSBGEDV/Servicios.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
